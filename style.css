@@ -1,0 +1,261 @@
+@font-face { font-family: "Barlow"; src: url("./css-task-master/Barlow/Barlow-Regular.otf") } 
+
+body {
+    font-family: "Barlow", sans-serif;
+    background-color: #EFF6FF;
+}
+
+h1, h2, p {
+    text-align:left;
+}
+
+.container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    background-color: #FFFFFF;
+    color: #2A4A5C;
+}
+
+.section--2 {
+    padding: 6em 3em;
+    
+}
+
+.buttons {
+    margin: 2em 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+}
+
+.buttons button {
+    flex-grow: 1;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 0%;
+    display: inline-flex;
+    align-items:center;
+    padding: 1em 2em;
+    color: #FFFFFF;
+}
+
+button img {
+    margin-right: 1em;
+}
+
+.button-fb {
+    background-color: #255A9B;
+}
+.button-li {
+    background-color: #0076B6;
+}
+.button-ca {
+    margin-top: 3em;
+    display: block;
+    border-radius: 5px;
+    background-color: #3698FB;
+    padding: 1em 5em;
+}
+
+.separator {
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.separator div {
+    position: relative;
+}
+
+.separator div::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background-color: #AFAFAF;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.separator div::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 100%;
+    width: 100px;
+    height: 1px;
+    background-color: #AFAFAF;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.input-label{
+    box-sizing: border-box;
+    color: #96A5B1;
+    padding: 0.25em 0.5em;
+    display: inline-flex;
+    flex-direction: column;
+    border: 1px solid #96A5B1;
+    padding-left: calc(0.5em+1px);
+    margin-left: 1px;
+}
+
+.input-label:focus-within{
+    border-left: 2px solid #3698FB;
+    padding-left: 0.5em;
+    margin-left: 0px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+    margin: 3em 0;
+    margin-top: 0;
+}
+
+.inputs label {
+    flex-grow: 1;
+}
+
+input{
+    border: none;
+    background-color: transparent;
+}
+input:focus{
+    outline: none;
+    
+}
+
+.investor-types {
+    display: flex;
+    justify-content: space-between;
+}
+
+.investor-type {
+    display: inline;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  
+  .investor-type input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: transparent;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+  }
+  
+  
+  .investor-type:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+ 
+  .investor-type input:checked ~ .checkmark {
+    background-color: #2196F3;
+    border: 3px solid #2196F3
+  }
+  
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  
+  .investor-type input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  
+  .investor-type .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 12px;
+    height: 12px;
+    transform: translate(-63%, -65%);
+    border-radius: 50%;
+    background: white;
+}
+
+.investor-types__desc {
+    width:40%;color:#AFAFAF; font-size: 0.75rem;margin-bottom: 3em;
+}
+
+.tos {
+    color:#AFAFAF; 
+    font-size: 0.75rem;
+    display: flex;
+}
+
+.checkbox {
+    transform: translateY(-10%);
+}
+
+@media screen and (max-width: 1365px) {
+    .section--1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    body {
+        width: 100%;
+        margin: 0;
+    }
+    .container {
+        width: 100%;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .section--2 {
+        padding: 1em;
+    }
+    .inputs {
+        flex-direction: column;
+    }
+    .investor-types {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .investor-types__desc {
+        width:90%;
+    }
+    .button-ca {
+        margin: 1em auto;
+    }
+}
